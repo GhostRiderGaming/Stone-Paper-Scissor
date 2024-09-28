@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    background-color:#B7E0FF;
+}
+.logo{
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newgame{
+    height: 3em;
+    width: 7em;
+    border-radius: 7px;
+    border: 2px solid white;
+}
+main{
+    height: 85vh;
+    background-color: #FFF5CD;
+}
+footer{
+    height: 5vh;
+    background-color: #E78F81;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.choicesarea{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 40%;
+    width: 8%;
+    margin-left: 2%;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.scoreboard{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+.msg{
+    height: 30%;
+}
+img:hover{
+    filter:brightness(0.5);
+}
+button:hover{
+    filter:brightness(0.5);
+}
+.YourScore{
+    margin-right: 3%;
+}
