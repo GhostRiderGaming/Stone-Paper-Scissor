@@ -20,7 +20,7 @@ header{
     justify-content: center;
     align-items: center;
 }
-.newgame{
+#newgame{
     height: 3em;
     width: 7em;
     border-radius: 7px;
@@ -37,7 +37,7 @@ footer{
     justify-content: center;
     color: white;
 }
-.choicesarea{
+.choicearea{
     height: 40%;
     display: flex;
     justify-content: center;
@@ -55,8 +55,11 @@ img{
     display: flex;
     justify-content: center;
 }
-.msg{
+.msg-container{
     height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 img:hover{
     filter:brightness(0.5);
@@ -66,4 +69,20 @@ button:hover{
 }
 .YourScore{
     margin-right: 3%;
+}
+#msg{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70%;
+    background-color: #141313a5;
+    border-radius: 1rem;
+    width: 18%;
+    color: white;
+
+
+}
+YourScore ComputerScore{
+    font-size: 2rem;
 }
