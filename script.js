@@ -16,7 +16,6 @@ newGamebtn.addEventListener("click",()=>{
        compScorePara.innerText=compScore;
        msg.innerText="Play your move!";
        msg.style.backgroundColor="#141313a5";
-       msg.style.fontSize="150%";
 });
 
 const showWinner = (userWin) =>{
