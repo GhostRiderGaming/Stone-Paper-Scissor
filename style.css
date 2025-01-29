@@ -27,21 +27,62 @@ header{
     border: 2px solid white;
 }
 main{
-    height: 85vh;
-    background-color: #FFF5CD;
+    height: 100vh;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
 }
 footer{
     height: 5vh;
+    width: 100vw;
     background-color: #E78F81;
     display: flex;
     justify-content: center;
     color: white;
+    position: relative;
+    bottom: 0px;
 }
 .choicearea{
     height: 40%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#showChoice{
+    height: 35%;
+    transition: transform 1s ease-in-out;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    right: 0px;
+    width: 30%;
+    padding: 5px; 
+    background-color: black;
+    color:white;
+}
+#playerChoice{
+    border : 2px solid white;
+    font-size: 200%;
+    height:100%;
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#computerChoice{
+    border : 2px solid white;
+    font-size: 200%;
+    height:100%;
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.choices{
+    margin: 5px;
 }
 img{
     height: 40%;
@@ -49,6 +90,8 @@ img{
     margin-left: 2%;
     border-radius: 50%;
     border: 2px solid black;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
 }
 .scoreboard{
     height: 30%;
@@ -56,16 +99,24 @@ img{
     justify-content: center;
 }
 .msg-container{
-    height: 30%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 img:hover{
     filter:brightness(0.5);
+    transform: scale(1.1);
+    background-color: #007BFF;
+    color: white;
 }
 button:hover{
-    filter:brightness(0.5);
+    transform: scale(1.1);
+    background-color: red;
+    color: white;
+}
+button:active{
+    transform: scale(0.9);
 }
 .YourScore{
     margin-right: 3%;
@@ -84,5 +135,60 @@ button:hover{
 
 }
 YourScore ComputerScore{
-    font-size: 2rem;
+    font-size: 6rem;
+    font-size: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+.countdown {
+    font-size: 50px;
+    font-weight: bold;
+    animation: countdownFade 1s ease-in-out infinite;
+    text-align: center;
+    display: none;
+}
+
+@keyframes countdownFade {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+/* Hand gestures */
+
+.winning {
+    animation: winnerAnimation 1s ease-in-out;
+}
+
+@keyframes winnerAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(3); }
+    100% { transform: scale(1); }
+}
+
+.score-up {
+    transform: scale(1.3);
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+img:active {
+    transform: scale(0.9);
+}
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    top: -10px;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
 }

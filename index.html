@@ -18,10 +18,15 @@
     </header>
     <main>
     <div class="choicearea">
-        <img src="https://th.bing.com/th?id=OIP.NMhMlw1aue9vzUepxWeCpAHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="stone" class="choice" id="stone">
-        <img src="https://th.bing.com/th?id=OIP.dpwyIEpPJeU7qvokllhHBgHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="scissor" class="choice" id="scissor">
-        <img src="https://th.bing.com/th?id=OIP.hZ19DgfkM-W7JY_9A1YFugHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="paper" class="choice" id="paper">
+        <img src="stone.jpg" alt="stone" class="choice" id="stone">
+        <img src="scissor.jpg" alt="scissor" class="choice" id="scissor">
+        <img src="paper.jpg" alt="paper" class="choice" id="paper">
+        <div id="showChoice">
+          <div id="playerChoice" class="choices"></div>
+        <div id="computerChoice" class="choices"></div>
+        </div>
     </div>
+    
     <div class="scoreboard">
         <div class="YourScore">
           <h1>You</h1>
@@ -32,6 +37,8 @@
           <p id="compScore">0</p>
         </div>
     </div>
+    <div id="countdown" class="countdown">3</div>
+    
     <div class="msg-container">
       <div id="msg">
         <h1>Play your move!</h1>
